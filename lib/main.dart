@@ -50,8 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
         print('\tDescription: ${cp949.decodeString(sp.description ?? '')}');
         print('\tManufacturer: ${sp.manufacturer}');
         print('\tSerial Number: ${sp.serialNumber}');
-        print('\tProduct ID: 0x${sp.productId!.toRadixString(16)}');
-        print('\tVendor ID: 0x${sp.vendorId!.toRadixString(16)}');
+        print('\tProduct ID: 0x${sp.productId?.toRadixString(16) ?? 00}');
+        print('\tVendor ID: 0x${sp.vendorId?.toRadixString(16) ?? 00}');
       }
       portList.add(sp);
     }
